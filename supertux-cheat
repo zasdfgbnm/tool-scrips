@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ~/.supertux2/profile1/
+sed -i 's/bonus \".*\"/bonus \"fireflower\"/g' *
+sed -i 's/fireflowers \d*/fireflowers 9999/g' *
+sed -i 's/coins \d*/coins 9999/g' *
