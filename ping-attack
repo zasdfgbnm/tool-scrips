@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo ping -f -s 40000 $1
