@@ -2,4 +2,4 @@
 cd ~/.supertux2/profile1/
 gsed -i 's/bonus \".*\"/bonus \"fireflower\"/g' *
 gsed -i 's/fireflowers \d*/fireflowers 9999/g' *
-gsed -i 's/coins \d*/coins 9999/g' *
+gsed -i 's/coins \d*/coins 99/g' *
