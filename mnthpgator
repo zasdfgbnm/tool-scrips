@@ -1,4 +1,10 @@
 #!/bin/sh
 
-sshfs qasdfgtyuiop@hipergator.rc.ufl.edu: ~/hipergator/home
-sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/scratch/lfs/qasdfgtyuiop ~/hipergator/scratch
+USRFL=`mktemp`
+GRPFL=`mktemp`
+echo 'gaoxiang:43541' > ${USRFL}
+echo 'gaoxiang:15601' > ${GRPFL}
+OPS="-o follow_symlinks,idmap=file,nomap=ignore,uidfile=${USRFL},gidfile=${GRPFL}"
+sshfs qasdfgtyuiop@hipergator.rc.ufl.edu: ~/hipergator/home ${OPS}
+sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/scratch/lfs/qasdfgtyuiop ~/hipergator/scratch ${OPS}
+rm -rf ${USRFL} ${GRPFL}
