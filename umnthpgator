@@ -1,0 +1,4 @@
+#!/bin/sh
+
+fusermount -u  ~/hipergator/home
+fusermount -u  ~/hipergator/scratch

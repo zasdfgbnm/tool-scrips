@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sshfs qasdfgtyuiop@hipergator.rc.ufl.edu: ~/hipergator/home
+sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/scratch/lfs/qasdfgtyuiop ~/hipergator/scratch
