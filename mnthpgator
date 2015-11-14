@@ -7,4 +7,5 @@ echo 'gaoxiang:15601' > ${GRPFL}
 OPS="-o follow_symlinks,idmap=file,nomap=ignore,uidfile=${USRFL},gidfile=${GRPFL}"
 sshfs qasdfgtyuiop@hipergator.rc.ufl.edu: ~/hipergator/home ${OPS}
 sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/scratch/lfs/qasdfgtyuiop ~/hipergator/scratch ${OPS}
+sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/apps ~/hipergator/apps ${OPS}
 rm -rf ${USRFL} ${GRPFL}
