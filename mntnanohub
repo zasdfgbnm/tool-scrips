@@ -5,5 +5,5 @@ GRPFL=`mktemp`
 echo 'gaoxiang:137935' > ${USRFL}
 echo 'gaoxiang:3000' > ${GRPFL}
 OPS="-o follow_symlinks,idmap=file,nomap=ignore,uidfile=${USRFL},gidfile=${GRPFL}"
-sshfs qasdfgtyuiop@nanohub.org: ~/mnt/hipergator/home ${OPS}
+sshfs qasdfgtyuiop@nanohub.org: ~/mnt/nanohub ${OPS}
 rm -rf ${USRFL} ${GRPFL}
