@@ -1,0 +1,9 @@
+#!/bin/sh
+
+USRFL=`mktemp`
+GRPFL=`mktemp`
+echo 'gaoxiang:139895' > ${USRFL}
+echo 'gaoxiang:3000' > ${GRPFL}
+OPS="-o follow_symlinks,idmap=file,nomap=ignore,uidfile=${USRFL},gidfile=${GRPFL}"
+sshfs qasdfgtyuiop.1@nanohub.org: ~/mnt/nanohub2 ${OPS}
+rm -rf ${USRFL} ${GRPFL}
