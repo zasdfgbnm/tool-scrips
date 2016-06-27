@@ -1,5 +1,5 @@
 #!/bin/bash
 cd ~/.supertux2/profile1/
-gsed -i 's/bonus \".*\"/bonus \"fireflower\"/g' *
-gsed -i 's/fireflowers \d*/fireflowers 9999/g' *
-gsed -i 's/coins \d*/coins 99/g' *
+sed -i 's/bonus \".*\"/bonus \"fireflower\"/g' *
+sed -i 's/fireflowers \d*/fireflowers 9999/g' *
+sed -i 's/coins \d*/coins 99/g' *
