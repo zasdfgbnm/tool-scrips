@@ -1,5 +1,5 @@
 #!/bin/sh
 
 fusermount -u  ~/mnt/hipergator/home
-fusermount -u  ~/mnt/hipergator/scratch
+fusermount -u  ~/mnt/hipergator/ufrc
 fusermount -u  ~/mnt/hipergator/apps

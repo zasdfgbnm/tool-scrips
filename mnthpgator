@@ -5,7 +5,7 @@ GRPFL=`mktemp`
 echo 'gaoxiang:43541' > ${USRFL}
 echo 'gaoxiang:15601' > ${GRPFL}
 OPS="-o follow_symlinks,idmap=file,nomap=ignore,uidfile=${USRFL},gidfile=${GRPFL}"
-sshfs qasdfgtyuiop@hipergator.rc.ufl.edu: ~/mnt/hipergator/home ${OPS}
-sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/scratch/lfs/qasdfgtyuiop ~/mnt/hipergator/scratch ${OPS}
-sshfs qasdfgtyuiop@hipergator.rc.ufl.edu:/apps ~/mnt/hipergator/apps ${OPS}
+sshfs qasdfgtyuiop@hpg2.rc.ufl.edu: ~/mnt/hipergator/home ${OPS}
+sshfs qasdfgtyuiop@hpg2.rc.ufl.edu:/ufrc/roitberg/qasdfgtyuiop ~/mnt/hipergator/ufrc ${OPS}
+sshfs qasdfgtyuiop@hpg2.rc.ufl.edu:/apps ~/mnt/hipergator/apps ${OPS}
 rm -rf ${USRFL} ${GRPFL}
