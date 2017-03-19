@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export SPARK_HOME=/home/gaoxiang/spark
+$SPARK_HOME/sbin/stop-master.sh
+$SPARK_HOME/sbin/stop-slave.sh
