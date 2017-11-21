@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 export SPARK_HOME=/home/gaoxiang/apps/spark
-$SPARK_HOME/sbin/start-master.sh -h localhost
+export SPARK_MASTER_HOST=localhost
+$SPARK_HOME/sbin/start-master.sh
 $SPARK_HOME/sbin/start-slave.sh spark://localhost:7077
