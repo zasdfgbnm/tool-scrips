@@ -1,0 +1,2 @@
+#!/bin/bash
+~/ethminer/build/ethminer/ethminer -U -P stratum://0x2c8eaf68d472c090050c58771be66ca2f83bf8f9.sunnyvale@us2.ethermine.org:4444
