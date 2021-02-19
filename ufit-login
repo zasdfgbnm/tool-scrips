@@ -1,2 +1,0 @@
-#!/bin/bash
-curl -d "userId=qasdfgtyuiop&pass=$(cat ~/secrets/gatorlink-password)&platform=Linux+x86_64&appversion=5.0+(X11)" https://auth.impulse.com:8443/authenticate.\!\^

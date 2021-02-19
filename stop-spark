@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-export SPARK_HOME=/home/gaoxiang/apps/spark
-export SPARK_MASTER_HOST=localhost
-$SPARK_HOME/sbin/stop-master.sh
-$SPARK_HOME/sbin/stop-slave.sh
