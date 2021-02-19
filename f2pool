@@ -1,0 +1,2 @@
+#!/bin/bash
+~/ethminer/build/ethminer/ethminer -U -P stratum1+tcp://zasdfgbnm.sunnyvale@eth-na.f2pool.com:6688
