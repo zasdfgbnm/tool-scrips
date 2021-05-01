@@ -1,0 +1,11 @@
+#!/bin/bash
+
+nsys profile \
+-t cuda,nvtx,osrt,cudnn,cublas \
+-s cpu \
+--capture-range=cudaProfilerApi \
+--stop-on-range-end=true \
+--cudabacktrace=true \
+--osrt-threshold=10000 \
+-x true \
+$@
