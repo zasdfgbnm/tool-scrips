@@ -1,0 +1,2 @@
+#!/bin/bash
+~/ethminer/build/ethminer/ethminer --cu-schedule auto --cu-streams 4 -U -P stratum://0x3aA8C925a73E932D3FB73185dcc9DfefDfc285C5.sunnyvale@us2.ethermine.org:4444
