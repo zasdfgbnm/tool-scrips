@@ -31,3 +31,6 @@ else:
     sudo ln -s @(user_thrust) @(system_thrust)
 
 print("==> Finished.")
+print("==> Currently:")
+file @(system_cub)
+file @(system_thrust)
