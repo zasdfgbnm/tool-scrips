@@ -1,0 +1,33 @@
+#!/usr/bin/xonsh
+
+$RAISE_SUBPROC_ERROR = True
+
+import os
+
+system_cub = '/usr/local/cuda/include/cub'
+system_thrust = '/usr/local/cuda/include/thrust'
+user_cub = '/home/gaoxiang/cub/cub'
+user_thrust = '/home/gaoxiang/thrust/thrust'
+backup_cub = '/usr/local/cuda/include/_cub'
+backup_thrust = '/usr/local/cuda/include/_thrust'
+
+system_cub_is_symlink = os.path.islink(system_cub)
+system_thrust_is_symlink = os.path.islink(system_thrust)
+
+assert system_cub_is_symlink == system_thrust_is_symlink, "thrust and cub must match"
+
+if system_cub_is_symlink:
+    print("==> Thrust and cub are symlinks, changing back to builtin directories...")
+    sudo unlink @(system_cub)
+    sudo unlink @(system_thrust)
+    sudo mv @(backup_cub) @(system_cub)
+    sudo mv @(backup_thrust) @(system_thrust)
+else:
+    print("==> Thrust and cub are directories, backing up and changing to symlinks to user's version...")
+    assert not os.path.exists(backup_cub) and not os.path.exists(backup_thrust), "Unable to backup system thrust or cub."
+    sudo mv @(system_cub) @(backup_cub)
+    sudo mv @(system_thrust) @(backup_thrust)
+    sudo ln -s @(user_cub) @(system_cub)
+    sudo ln -s @(user_thrust) @(system_thrust)
+
+print("==> Finished.")
